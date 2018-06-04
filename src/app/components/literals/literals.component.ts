@@ -13,6 +13,11 @@ export class LiteralsComponent implements OnInit {
   welcomeAngularOrange: string;
   welcomeSOACSOrange: string;
 
+  stringParts: Array<string>;
+  firstPrice: string;
+  secondPrice: string;
+  totalCostResult: string;
+
   multiLineComment: string;
 
   constructor() {
@@ -45,6 +50,8 @@ export class LiteralsComponent implements OnInit {
     console.log('Eating the line breaks with next string.');
     console.log(this.printLongLine('continues'));
     console.log(this.printAnotherLongLine());
+    this.taggedTemplate();
+
   }
 
   printLongLine = val => {
@@ -60,6 +67,23 @@ export class LiteralsComponent implements OnInit {
       } that helps developers build robust applications for${''
       } the commercial industry.`;
     return anotherSingleLineText;
+  }
+
+  taggedTemplate() {
+    let firstPrice = 10.00;
+    let secondPrice = 9.59;
+    this.totalCostResult = this.totalCost`Your item prices are ${firstPrice} ${secondPrice}.`;
+    console.log('Tagged Template is: ' + this.totalCostResult);
+  }
+
+  totalCost(stringParts, firstPrice, secondPrice) {
+    this.stringParts = stringParts;
+    this.firstPrice = firstPrice;
+    this.secondPrice = secondPrice;
+    let totalCost = firstPrice + secondPrice;
+    let result = `${stringParts[0]} $${firstPrice} and $${secondPrice}${stringParts[2]} Thus, your total cost is $${totalCost}.`;
+
+    return result;
   }
 
 }
