@@ -1,24 +1,25 @@
-<h3>Template Literals</h3>
-<div>
-  {{welcomeAngularOrange}}
-</div>
-<div>
-  {{welcomeSOACSOrange}}
-</div>
-<h3>Multiline Strings</h3>
-<div>
-  {{multiLineComment}}
-</div>
-<div>
-  stringParts = {{stringParts | json }}
-</div>
-<h3>Tagged Template Strings</h3>
-<div>
-  firstPrice = {{firstPrice}}
-</div>
-<div>
-  secondPrice = {{secondPrice}}
-</div>
-<div>
-  totalCostResult = {{totalCostResult}}
+<div><h3>Template Literals</h3>
+  <div>
+    {{welcomeAngularOrange}}
+  </div>
+  <div>
+    {{welcomeSOACSOrange}}
+  </div>
+  <h3>Multiline Strings</h3>
+  <div>
+    {{multiLineComment}}
+  </div>
+  <div>
+    stringParts = {{stringParts | json }}
+  </div>
+  <h3>Tagged Template Strings</h3>
+  <div>
+    firstPrice = {{firstPrice | currency }}
+  </div>
+  <div>
+    secondPrice = {{secondPrice | currency }}
+  </div>
+  <div>
+    totalCostResult = {{totalCostResult}}
+  </div>
 </div>
