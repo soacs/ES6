@@ -53,7 +53,7 @@ export class ArrowComponent implements OnInit {
     setInterval(() => {
         this.itemPrice = 100.00*Math.random();
         console.log('the price for item ' + this.item + ' is ' + this.itemPrice);
-    }, 5000);
+    }, 30000);
   }
 
   showThisArrow() {

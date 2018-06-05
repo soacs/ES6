@@ -7,6 +7,8 @@ import { LiteralsComponent } from './components/literals/literals.component';
 import { OptionalComponent } from './components/optional/optional.component';
 import { ScopeComponent } from './components/scope/scope.component';
 import { ArrowComponent } from './components/arrow/arrow.component';
+import { RestComponent } from './components/rest/rest.component';
+import { SpreadComponent } from './components/spread/spread.component';
 
 
 @NgModule({
@@ -15,7 +17,9 @@ import { ArrowComponent } from './components/arrow/arrow.component';
     LiteralsComponent,
     OptionalComponent,
     ScopeComponent,
-    ArrowComponent
+    ArrowComponent,
+    RestComponent,
+    SpreadComponent
   ],
   imports: [
     BrowserModule
