@@ -13,6 +13,8 @@ import { GeneratorComponent } from './components/generator/generator.component';
 import { DescructuringComponent } from './components/descructuring/descructuring.component';
 import { IteratingComponent } from './components/iterating/iterating.component';
 import { ClassesComponent } from './components/classes/classes.component';
+import { PromisesComponent } from './components/promises/promises.component';
+import { ModulesComponent } from './components/modules/modules.component';
 
 
 @NgModule({
@@ -27,7 +29,9 @@ import { ClassesComponent } from './components/classes/classes.component';
     GeneratorComponent,
     DescructuringComponent,
     IteratingComponent,
-    ClassesComponent
+    ClassesComponent,
+    PromisesComponent,
+    ModulesComponent
   ],
   imports: [
     BrowserModule

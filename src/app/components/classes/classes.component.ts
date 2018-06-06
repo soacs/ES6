@@ -19,23 +19,37 @@ class Item {
 }
 
 class Person {
+
+  income: number;
+
   constructor(income) {
     this.income = income;
   }
 
   calcBonus() {
-    return .10;
+    return this.income * .25
   }
 }
-class Employee extends Person {
-  constructor(income, state) {
+
+class Staff {
+  constructor(public income) {
+    this.income = income;
+  }
+
+  calcBonus() {
+    return this.income*.10;
+  }
+}
+
+class Employee extends Staff {
+  constructor(income, public state) {
     super(income);
     this.state = state;
   }
 
   calcBonus() {
-    if (state == 'NY') {
-      return .12;
+    if (this.state == 'NY') {
+      return this.income*.12;
     } else {
       return super.calcBonus();
     }
@@ -51,7 +65,13 @@ export class ClassesComponent implements OnInit {
 
   priceOfGuitar: number;
   itemCounter: number;
-  person: Person = {};
+  person: any;
+
+  personIncome: number;
+  personBonus: number;
+
+  staffBonus: number;
+  employeeBonus: number;
 
   constructor() {
   }
@@ -74,6 +94,7 @@ export class ClassesComponent implements OnInit {
 
 
   createItem() {
+    console.log('Item counter:' );
     Item.counter = 0;
     let item1 = new Item();
     Item.counter++;
@@ -85,33 +106,26 @@ export class ClassesComponent implements OnInit {
   }
 
   createGetSet() {
-    let Person = {
-      income: 0, set income(inc) {
-        this.income = inc;
-      }, get income() {
-        return this.income;
-      },
-      calcTax() {
-        return this.income * .25
-      }
-    };
-
-    Person.income = 50000;
-    console.log('Income = ' + Person.income);
-    Person.income = 100000;
-    console.log(`If person income = ` + Person.income + `, their tax = ${Person.calcTax()}`);
-
+    let person = new Person(0);
+    console.log('Income of person= ' + person.income);
+    person.income = 50000;
+    console.log('Income of person = ' + person.income);
+    person.income = 100000;
+    console.log(`If person income = ` + person.income + `, their tax = ${person.calcBonus()}`);
+    this.personIncome = person.income;
+    this.personBonus = person.calcBonus();
   }
 
   createSubclass() {
-    person1 = new Person(100000);
-    let bonus = person1.calcBonus();
-    console.log('person bonus = ' + bonus);
-    person2 = new Employee(100000, 'NY');
-    bonus = person2.calcBonus();
+    let staff = new Staff(100000);
+    let bonus = staff.calcBonus();
+    this.staffBonus = bonus;
+    console.log('staff bonus = ' + bonus);
+    let employee = new Employee(100000, 'NY');
+    bonus = employee.calcBonus();
+    this.employeeBonus = bonus;
     console.log('employee bonus = ' + bonus);
   }
-
 
 }
 
