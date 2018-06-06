@@ -1,0 +1,19 @@
+div {
+  font-family: Arial;
+  font-size: 18px;
+  padding: 5px;
+  background: mediumpurple;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  background: mediumpurple;
+  flex-direction:row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+h1 {
+  align-items: center;
+}

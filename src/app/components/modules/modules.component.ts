@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {ProductsService} from '../../services/products/products.service';
+import {UserService} from '../../services/users/users.service';
+//import { UserService} from '../modules/user.module';
 
 @Component({
   selector: 'app-modules',
@@ -7,7 +10,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ModulesComponent implements OnInit {
 
-  constructor() { }
+  products: Array<any>;
+  user: any;
+
+  constructor(productsService: ProductsService, userService: UserService) {
+    this.products = productsService.getProducts();
+    this.user = userService.getProfile();
+  }
 
   ngOnInit() {
   }

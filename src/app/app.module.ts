@@ -1,7 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-
+import { ProductsService } from './services/products/products.service';
+import { UserService } from './services/users/users.service';
+//import { UserModule } from './modules/user.module';
 import { AppComponent } from './components/applcation/app.component';
 import { LiteralsComponent } from './components/literals/literals.component';
 import { OptionalComponent } from './components/optional/optional.component';
@@ -36,7 +37,7 @@ import { ModulesComponent } from './components/modules/modules.component';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [ProductsService, UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
