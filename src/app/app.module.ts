@@ -12,6 +12,7 @@ import { SpreadComponent } from './components/spread/spread.component';
 import { GeneratorComponent } from './components/generator/generator.component';
 import { DescructuringComponent } from './components/descructuring/descructuring.component';
 import { IteratingComponent } from './components/iterating/iterating.component';
+import { ClassesComponent } from './components/classes/classes.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { IteratingComponent } from './components/iterating/iterating.component';
     SpreadComponent,
     GeneratorComponent,
     DescructuringComponent,
-    IteratingComponent
+    IteratingComponent,
+    ClassesComponent
   ],
   imports: [
     BrowserModule

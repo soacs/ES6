@@ -48,7 +48,7 @@ export class GeneratorComponent implements OnInit {
 
     function* getPrice() {
       while (true) {
-        yield Math.random() * 300;
+        yield Math.random() * 100;
       }
     }
   }
