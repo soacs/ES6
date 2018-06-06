@@ -80,5 +80,4 @@ export class DescructuringComponent implements OnInit {
     this.otherUsers = otherUsers;
 
   }
-
 }
