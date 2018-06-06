@@ -9,6 +9,8 @@ import { ScopeComponent } from './components/scope/scope.component';
 import { ArrowComponent } from './components/arrow/arrow.component';
 import { RestComponent } from './components/rest/rest.component';
 import { SpreadComponent } from './components/spread/spread.component';
+import { GeneratorComponent } from './components/generator/generator.component';
+import { DescructuringComponent } from './components/descructuring/descructuring.component';
 
 
 @NgModule({
@@ -19,7 +21,9 @@ import { SpreadComponent } from './components/spread/spread.component';
     ScopeComponent,
     ArrowComponent,
     RestComponent,
-    SpreadComponent
+    SpreadComponent,
+    GeneratorComponent,
+    DescructuringComponent
   ],
   imports: [
     BrowserModule

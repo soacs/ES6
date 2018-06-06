@@ -50,10 +50,12 @@ export class ArrowComponent implements OnInit {
 
   priceQuote(item) {
     this.item = item;
-    setInterval(() => {
-        this.itemPrice = 100.00*Math.random();
-        console.log('the price for item ' + this.item + ' is ' + this.itemPrice);
-    }, 30000);
+    //setInterval(() => {
+       // this.itemPrice = 100.00*Math.random();
+      //  console.log('the price for item ' + this.item + ' is ' + this.itemPrice);
+    //}, 30000);
+
+    this.itemPrice = 0;
   }
 
   showThisArrow() {
