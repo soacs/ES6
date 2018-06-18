@@ -14,16 +14,11 @@ export class GeneratorComponent implements OnInit {
   constructor() {
   }
 
-  next() {
-  }
-
-  nextLog() {
-  }
-
   ngOnInit() {
     let logIterator = logInfo();
     logIterator.next(); // BEGIN logInfo
     logIterator.next(); // CONTINUE PROCESSING logInfo
+    logIterator.next();
 
     let priceIterator = getPrice(); // returns generator
     const limitPrice = 25;

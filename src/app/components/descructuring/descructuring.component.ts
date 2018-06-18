@@ -21,14 +21,11 @@ export class DescructuringComponent implements OnInit {
   company2Message: string;
   company3Message: string;
 
-
   user1: string;
   user2: string;
   otherUsers: Array<any>;
 
-
-  constructor() {
-  }
+  constructor() {}
 
   ngOnInit() {
     this.simpleDescructuring();

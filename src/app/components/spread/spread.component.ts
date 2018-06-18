@@ -44,7 +44,7 @@ export class SpreadComponent implements OnInit {
   }
 
 
-  weight(category?:string, person1?:Person, person2?:Person, person3?:Person) {
+  weight(category?, person1?, person2?, person3?) {
     let average = 0, total=0;
     let result = 0;
     if (category == 'average') {
@@ -52,8 +52,8 @@ export class SpreadComponent implements OnInit {
         + person3.weight) / 3;
       result = average;
     } else {
-      total = (person1.weight + person2.weight
-        + person3.weight);
+      total = person1.weight + person2.weight
+        + person3.weight;
       result = total;
     }
       return result;

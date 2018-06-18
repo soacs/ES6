@@ -10,6 +10,7 @@ export class ScopeComponent implements OnInit {
   n: number;
   name = 'Jane';
   nonconst: number;
+  i: number;
 
   constructor() {
     this.showValue();
@@ -24,6 +25,7 @@ export class ScopeComponent implements OnInit {
     // var i = 0 --> hoisted
     // let i = 0 --> scope is for loop.
     for (var i = 0; i < 5; i++) {
+      console.log('Inside for loop i = ' + i);
     }
     console.log('i = ' + i);
     this.n = i;
@@ -33,7 +35,7 @@ export class ScopeComponent implements OnInit {
     let name = 'Steve';
 
     if (true) {
-      let name = 'john';
+      let name = 'John';
       console.log('inside block name is ' + name);
     }
 

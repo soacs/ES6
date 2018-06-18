@@ -13,9 +13,7 @@ export class RestComponent implements OnInit {
   johnIncome: number = 156;
   joeIncome: number = 67;
 
-
   constructor() {
-
   }
 
   ngOnInit() {
@@ -29,15 +27,17 @@ export class RestComponent implements OnInit {
 
   calcAverageIncome(county, ...people) {
     let numberOfPeople = people.length;
+    console.log('number of people in parameter - ' + numberOfPeople);
     let income = 0, averageIncome = 0, totalIncome = 0;
-    people.forEach(function (person) {
-      let people = {
-        'Pete': 113,
+    people.forEach(person => {
+      let allpeople =
+        {'Pete': 113,
         'John': 156,
         'Joe': 67,
-        'default': 0
-      };
-      income = people[person] || people['default'];
+        'default': 0};
+
+      income = allpeople[person] || allpeople['default'];
+      console.log('income - ' + income);
       totalIncome = totalIncome + income;
     });
     this.totalIncome = totalIncome;

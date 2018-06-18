@@ -33,7 +33,7 @@ export class LiteralsComponent implements OnInit {
   initialize() {
     this.angularorangeCompanyName = 'AngularOrange.io';
     console.log(`angularorangeCompanyName is set to: ${this.angularorangeCompanyName}`);
-    this.soacsCompanyName = 'SoaConsutingServices.com';
+    this.soacsCompanyName = 'SoaConsultingServices.com';
     console.log(`soacsCompanyName is set to: ${this.soacsCompanyName}`);
   }
 
@@ -81,7 +81,7 @@ export class LiteralsComponent implements OnInit {
     this.firstPrice = firstPrice;
     this.secondPrice = secondPrice;
     let totalCost = firstPrice + secondPrice;
-    let result = `${stringParts[0]} $${firstPrice} and $${secondPrice}${stringParts[2]} Thus, your total cost is $${totalCost}.`;
+    let result = `${stringParts[0]} $${firstPrice} and $${secondPrice}${stringParts[2]} Thus, your total price is $${totalCost}.`;
 
     return result;
   }

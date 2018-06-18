@@ -12,14 +12,13 @@ export class OptionalComponent implements OnInit {
   costWithDefaultTax: string;
 
   constructor() {
-
   }
 
   ngOnInit() {
 
     this.costWithSpecificTax = this.calcCost(100.00, .09);
     this.costWithOptionalTax = this.calcCost(100.00);
-    this.costWithDefaultTax = this.calcDefaultTaxCost(105.00);
+    this.costWithDefaultTax = this.calcDefaultTaxCost(100.00);
 
     console.log('costWithSpecificTax = ' + this.costWithSpecificTax);
     console.log('costWithOptionalTax = ' + this.costWithOptionalTax);
@@ -40,10 +39,11 @@ export class OptionalComponent implements OnInit {
 }
 
   getTaxRate(price) {
-    if(price<101.00){
+    if(price<99.00){
       return .04;
     } else {
       return .08;
     }
   }
+
 }

@@ -35,6 +35,7 @@ export class IteratingComponent implements OnInit {
     }
 
     let person = {name: 'steve', phone: '203-867-5309', address: '5 mocking bird lane'};
+    console.log('person = ' + JSON.stringify(person));
     console.log('Forin person object names = ');
     for(let p in person) {
       console.log(p);
@@ -52,7 +53,5 @@ export class IteratingComponent implements OnInit {
     console.log('Forof mixArray = ');
     for(let e of mixArray) {	console.log(e); }
   }
-
-
 
 }

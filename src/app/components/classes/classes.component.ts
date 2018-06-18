@@ -1,5 +1,4 @@
-import {Component, OnInit} from '@angular/core';
-
+import {Component, OnInit, Input, Output} from '@angular/core';
 
 class Product {
   constructor(public price) {
@@ -18,14 +17,17 @@ class Item {
   static counter: number;
 }
 
-class Person {
 
+class Person {
   income: number;
 
-  constructor(income) {
-    this.income = income;
+  constructor(inc: number) {
+    this.income = inc;
   }
 
+  /* set income(inc: number){this.income=inc;}
+   get income(): number {return this.income;}
+   */
   calcBonus() {
     return this.income * .25
   }
@@ -37,7 +39,7 @@ class Staff {
   }
 
   calcBonus() {
-    return this.income*.10;
+    return this.income * .10;
   }
 }
 
@@ -49,7 +51,7 @@ class Employee extends Staff {
 
   calcBonus() {
     if (this.state == 'NY') {
-      return this.income*.12;
+      return this.income * .12;
     } else {
       return super.calcBonus();
     }
@@ -94,7 +96,7 @@ export class ClassesComponent implements OnInit {
 
 
   createItem() {
-    console.log('Item counter:' );
+    console.log('Item counter:');
     Item.counter = 0;
     let item1 = new Item();
     Item.counter++;
